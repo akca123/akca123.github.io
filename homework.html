@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<meta charset="utf-8">
+<head>
+ <title> new document </title>
+<style>
+body { font-family: NanumGothic;}
+.page { margin : 0 auto;}
+h1 { margin: 35px; padding: 10px 0px;}
+#nav{
+	max-width : 800px;
+	list-style: none;
+	height: 45px;
+	background: white;
+	padding: 15px;
+}
+#nav li{ 
+ float:left;
+ position:relative;
+ margin:5px 30px 5px 0px;
+ padding:0;  
+}
+#nav li a{ 
+  display:block;
+  padding:10px 20px;
+  margin:0;
+  font-weight:600;
+  font-size:1em;
+  color: #979595;
+  text-decoration:none;
+  border-radius:1.4em;
+}
+#nav li a:hover{ 
+ background: #cccccc;
+ color:black;
+ text-shadow:0 1px 1px rgba(255,255,255,.1);
+ border-radius:1em;
+}
+#nav ul{ 
+ margin:0;
+ padding:0;
+ list-style:none;
+ position:absolute;
+ left:0;
+ top:45px;
+ width:150px;
+ background: #eaeaea;
+ border-radius:8px;
+ opacity:0;
+}
+#nav li:hover ul{ 
+ opacity:1; 
+}
+#nav ul li{ 
+ float:none;
+ margin:0;
+ padding:0;
+}
+#nav ul li a{ 
+  font-weight:normal;
+  color: #979595;
+}
+#nav ul li a:hover{ 
+ background: #cccccc;
+ color:black;
+ border-radius:0;
+}
+#nav ul li:first-child a{ 
+  border-top-left-radius:8px;
+  border-top-right-radius:8px;
+}
+#nav ul li:last-child a{ 
+ border-bottom-left-radius:8px;
+ border-bottom-right-radius:8px;
+}
+</style>
+</head>
+<body>
+<div class="page">
+<h1>Platform Seoul</h1>
+
+<ul id="nav">
+ <li><a href="">PlatForm</a></li>
+ <li><a href="">메뉴2</a>
+  <ul>
+   <li><a href="">메뉴2-1</a></li>
+   <li><a href="">메뉴2-2</a></li>
+  </ul>
+ </li>
+ <li><a href="">메뉴3</a>
+  <ul>
+   <li><a href="">메뉴3-1</a></li>
+   <li><a href="">메뉴3-2</a></li>
+   <li><a href="">메뉴3-3</a></li>
+   <li><a href="">메뉴3-4</a></li>
+  </ul>
+ </li>
+ <li><a href="">메뉴4</a>
+  <ul>
+   <li><a href="">메뉴4-1</a></li>
+   <li><a href="">메뉴4-2</a></li>
+  </ul> 
+ </li>
+ <li><a href="">메뉴5</a></li>
+</ul>
+</div>
+</body>
+</html>
