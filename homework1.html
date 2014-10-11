@@ -1,0 +1,104 @@
+* { margin: 0; padding: 0;}
+body { width: 900px; font-family: NanumGothic; }
+.page {position:fixed; left:0; right: 0; top:0; height: 200px; background-color: #e0e0e0;}
+h1 { margin: 50px 50px 20px; padding: 10px 0px;}
+#nav{
+	margin: 20px;
+	max-width : 1000px;
+	list-style: none;
+	height: 45px;
+	background: #e0e0e0;
+	padding: 15px;
+}
+#nav li{ 
+ float:left;
+ position:relative;
+ margin:5px 90px 5px 0px;
+ padding:0;  
+}
+#nav li a{ 
+  display:block;
+  padding:10px 20px;
+  margin:0;
+  font-weight:600;
+  font-size:1em;
+  color: #858484;
+  text-decoration:none;
+  border-radius:1.4em;
+}
+#nav li a:hover{ 
+ background: #cccccc;
+ color:black;
+ text-shadow:0 1px 1px rgba(255,255,255,.1);
+ border-radius:1em;
+}
+#nav ul{ 
+ margin:0;
+ padding:0;
+ list-style:none;
+ position:absolute;
+ left:0;
+ top:45px;
+ width:170px;
+ background: #acacac;
+ border-radius:8px;
+ opacity:0;
+}
+#nav li:hover ul{ 
+ opacity:1; 
+}
+#nav ul li{ 
+ float:none;
+ margin:0;
+ padding:0;
+}
+#nav ul li a{ 
+  font-weight:normal;
+  color: #707070;
+}
+#nav ul li a:hover{ 
+ background: #858484;
+ color:black;
+ border-radius:0;
+}
+#nav ul li:first-child a{ 
+  border-top-left-radius:8px;
+  border-top-right-radius:8px;
+}
+#nav ul li:last-child a{ 
+ border-bottom-left-radius:8px;
+ border-bottom-right-radius:8px;
+}
+.leftbar {position:fixed; float: left; width: 300px; height: 1000px; background-color: #e0e0e0; }
+.container { margin-top:200px; margin-left:300px; padding: 20px 50px; line-height: 40px;}
+#nav2{
+	width: 400px;
+	list-style: none;
+	padding: 5px;
+	font-size:12px;
+}
+#nav2 li{ 
+ position:relative;
+ margin:5px 0px 5px 0px;
+ padding:0;  
+}
+#nav2 li a{ 
+  display:inline;
+  padding:5px 10px;
+  margin:0;
+  font-weight:600;
+  font-size:1em;
+  color: #979595;
+  text-decoration:none;
+  border-radius:1.4em;
+}
+#nav2 li a:hover{ 
+ background: #cccccc;
+ color:black;
+ text-shadow:0 1px 1px rgba(255,255,255,.1);
+ border-radius:1em;
+}
+#nav2 > .art { width:134px; float: left;}
+#nav2 > .art1 { width:160px; float: left;}
+img { width: 100%;}
+.tti { font-size:18px; margin-left: 15px; margin-bottom: 20px; }
