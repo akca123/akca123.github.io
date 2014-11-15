@@ -5,7 +5,8 @@
   <title>X-MEN <<DAYS OF FUTURE PAST>></title>
   
   <style>
-  body { background-image:url('http://1.bp.blogspot.com/-Ez3elGKxG0Y/VFOuqYV9neI/AAAAAAAAADw/ueX91rnXPcE/s1600/%EC%97%91%EC%8A%A4%EB%A7%A8.png'), url('http://2.bp.blogspot.com/-_RJr1EnrZKA/VFOuooRpJiI/AAAAAAAAADI/19wJJ1tTV3s/s1600/%EB%B0%B0%EA%B2%BD1.jpg');
+  body { 
+    background-image:url('http://1.bp.blogspot.com/-Ez3elGKxG0Y/VFOuqYV9neI/AAAAAAAAADw/ueX91rnXPcE/s1600/%EC%97%91%EC%8A%A4%EB%A7%A8.png'), url('http://2.bp.blogspot.com/-_RJr1EnrZKA/VFOuooRpJiI/AAAAAAAAADI/19wJJ1tTV3s/s1600/%EB%B0%B0%EA%B2%BD1.jpg');
 background-size:600px 893px, 1800px 893px;
 background-repeat: no-repeat;
 background-position:  50% 0;
@@ -15,49 +16,202 @@ font-family: 'AppleGothic', 'NanumGothic', 'Gothic', san-serif;
 max-width: 500px; padding: 0 20px 0 20px;
 color: white;
 }
-.title {width:100%; max-width: 400px;   margin:700px 30px 5px 9%; }
-.r {float: right;  margin-top: 15px;}
-.right {float: right; margin-top: 15px;}
-.right1 {float: right; margin-top: 20px;}
-.open {color: white; text-align: center; font-family: 'NanumGothic', sans-serif; font-size: 25px; margin-top: 0; font-weight: bolder;}
-.italic {font-style: italic;}
-.left1 { width: 50px; float: left;  margin-top: 15px; }
-.left2 { width: 70px; float: left; margin-top: 28px;}
-.synop {text-align: center; color: white; margin:150px 0 100px 0;}
-.intro {margin-top: 150px;}
-.intro2 {margin-top: 230px;}
-.figure {width: 300px; float: left; margin:0 50px 20px 0; max-width: 100%}
-ul li {margin-top: 20px;}
-.tit {text-align: left; margin-bottom: 100px; color: white;}
-li {width: 100%; min-width: 200px;}
-ol {list-style: none; padding: 0;}
+.title {
+  width:100%; 
+  max-width: 400px;   
+  margin:700px 30px 5px 9%; 
+}
+    
+.fox {
+  float: right;
+  margin-top: 15px;
+}
+    
+.real {
+  float: right;
+  margin-top: 15px;
+}
+
+.hat {
+  float: right;
+  margin-top: 20px;
+}
+    
+.open {
+  color: white;
+  text-align: center; 
+  font-family: 'NanumGothic', sans-serif;
+  font-size: 25px;
+  margin-top: 0;
+  font-weight: bolder;
+}
+    
+.italic {
+  font-style: italic;
+}
+    
+.marvel { 
+  width: 50px; 
+  float: left;  
+  margin-top: 15px;
+}
+    
+.xmen { 
+  width: 70px; 
+  float: left;
+  margin-top: 28px;
+}
+
+.synop {
+  text-align: center;
+  color: white;
+  margin:150px 0 100px 0;
+}
+    
+.intro {
+  margin-top: 150px;
+}
+    
+.intro2 {
+  margin-top: 230px;
+}
+    
+.figure {
+  width: 300px;
+  float: left;
+  margin:0 50px 20px 0;
+  max-width: 100%;
+}
+    
+ul li {
+  margin-top: 20px;
+}
+
+.tit {
+  text-align: left;
+  margin-bottom: 100px;
+  color: white;
+}
+    
+.tit2 {
+  text-align: left;
+  margin-bottom: 100px;
+  color: white;
+}
+    
+li {
+  width: 100%;
+  min-width: 200px;
+}
+    
+ol {
+  list-style: none;
+  padding: 0;
+}
+    .hide {display:none;}
+   
+    .printmarvel { display:none;}
+    .printxmen { display:none;}
+    .printfox { display:none;}
+    .printhat { display:none;}
+    .printreal { display:none;}
+    
+@media print  { 
+  body {
+    color:black;
+     background-image:none;
+    background-color: white;
+    }
+  .title {
+  width:100%; 
+  max-width: 400px;   
+  margin:700px 30px 5px 9%; 
+}
+  .open {color:black;}
+  
+  .synop {
+    color:black;
+  margin: 0;
+}
+  .tit {
+    padding: 70px 0 0 0;
+    margin-top: 150px;
+  color: black;
+}
+  .tit2 {
+    padding: 30px 0 0 0;
+    margin-top: 10px;
+  color: black;
+}
+  
+    .marvel { display:none;}
+    .xmen { display:none;}
+    .fox { display:none;}
+    .hat { display:none;}
+    .real { display:none;}
+  
+  .hide {display:block; position: absolute; }
+  .printmarvel { display:inline; width: 50px; height:20px; float: left;  margin-top: 15px;}
+  .printxmen { display:inline; width: 70px; float: left; margin-top: 25px;}
+  .printfox { display:inline; width: 21px; height:23px; float: right; margin-top: 15px;}
+  .printreal { display:inline; width: 57px; height:13px; float: right; margin-top: 25px; margin-right: 10px;}
+  .printhat { display:inline; width: 32px; height:17px; float: right; margin-top: 20px; margin-right: 10px;}
+
+.intro {
+  margin-top: 0;
+}
+    
+.intro2 {
+  margin-top: 230px;
+}
+    
+.figure {
+  width: 250px;
+  float: left;
+  margin:0 50px 20px 0;
+  max-width: 100%;
+}
+.magnito {margin-top: 10px;}
+  
+ul li {
+  margin-top: 10px;
+}
+  
+}
+
+    
 </STYLE>
 </head>
 <body>
+  <img class="hide" src="https://2.bp.blogspot.com/-PaAdDgdX6jI/VGMus6Ox0MI/AAAAAAAAAGM/jDbNtEXtSzc/s1600/%EC%97%91%EC%8A%A4%EB%A7%A82.png" alt="poster character">
 		<h1>
 <img class="title" src="http://2.bp.blogspot.com/-LX0QavhU0tQ/VFOuq3lU2OI/AAAAAAAAAD0/N6ZLyj24vWM/s1600/%EC%A0%9C%EB%AA%A9.png" alt="엑스맨 데이즈 오브 퓨쳐 패스트"></h1>
 <div>
 	<p class="open">
 	5월, 미래가 결정된다<span class="italic">!</span>
 	</p>
- <img class="left1" src="http://1.bp.blogspot.com/-yROuOJui2bs/VFOurCTlWFI/AAAAAAAAAD4/4LRT5c653as/s1600/%EC%A0%9C%EC%9E%91%EC%82%AC1.png" alt="MARVEL">
-<img class="left2" src="http://4.bp.blogspot.com/--uACyK-mK2k/VFOuruv6sQI/AAAAAAAAAEA/7HaQN48P4Cc/s1600/%EC%A0%9C%EC%9E%91%EC%82%AC2.png" alt="xmen2014.com">
-<img class="r" src="http://1.bp.blogspot.com/-v6eHEpZJRDs/VFOupzGvPkI/AAAAAAAAADg/R7zZGeETyLs/s1600/%EC%97%91%EC%8A%A4%EB%A7%A8%2B%EC%A0%9C%EC%9E%91%EC%82%AC3.png" alt="20세기 폭스 코리아">
-<img class="right1" src="http://2.bp.blogspot.com/-OFZDFqxuFFI/VFOupVahS-I/AAAAAAAAADU/FdOEM7aS7c8/s1600/%EC%97%91%EC%8A%A4%EB%A7%A8%2B%EC%A0%9C%EC%9E%91%EC%82%AC2.png" alt="배드 햇 해리 프로덕션">
-<img class="right" src="http://1.bp.blogspot.com/-Ym24gfwzYQ4/VFOupN40oCI/AAAAAAAAADQ/SmbJvtwTKCc/s1600/%EC%97%91%EC%8A%A4%EB%A7%A8%2B%EC%A0%9C%EC%9E%91%EC%82%AC.png" alt="real 3D">
+ <img class="marvel" src="http://1.bp.blogspot.com/-yROuOJui2bs/VFOurCTlWFI/AAAAAAAAAD4/4LRT5c653as/s1600/%EC%A0%9C%EC%9E%91%EC%82%AC1.png" alt="MARVEL">
+  <img class="printmarvel" src="https://3.bp.blogspot.com/-8oQFXuxS5yE/VGMzJk1ON6I/AAAAAAAAAGY/pQuyhdsx3hg/s1600/vinyl-decal-sticker-211.jpg" alt="MARVEL">
+<img class="xmen" src="http://4.bp.blogspot.com/--uACyK-mK2k/VFOuruv6sQI/AAAAAAAAAEA/7HaQN48P4Cc/s1600/%EC%A0%9C%EC%9E%91%EC%82%AC2.png" alt="xmen2014.com">
+  <img class="printxmen" src="http://1.bp.blogspot.com/-ewMBqrU2An0/VGMzU_vGOnI/AAAAAAAAAGo/eJw17nL1Wt4/s1600/%EC%A0%9C%EC%9E%91%EC%82%AC2.png" alt="xmen2014.com">
+<img class="fox" src="http://1.bp.blogspot.com/-v6eHEpZJRDs/VFOupzGvPkI/AAAAAAAAADg/R7zZGeETyLs/s1600/%EC%97%91%EC%8A%A4%EB%A7%A8%2B%EC%A0%9C%EC%9E%91%EC%82%AC3.png" alt="20세기 폭스 코리아">
+  <img class="printfox" src="http://1.bp.blogspot.com/-ddpW_Xpsbjs/VGMzdNl1FII/AAAAAAAAAGw/eixn9clrDd0/s1600/Fox-1935.jpg" alt="20세기 폭스 코리아">
+<img class="hat" src="http://2.bp.blogspot.com/-OFZDFqxuFFI/VFOupVahS-I/AAAAAAAAADU/FdOEM7aS7c8/s1600/%EC%97%91%EC%8A%A4%EB%A7%A8%2B%EC%A0%9C%EC%9E%91%EC%82%AC2.png" alt="배드 햇 해리 프로덕션">
+  <img class="printhat" src="https://3.bp.blogspot.com/-VREJo0lhtY8/VGMuqGgVwPI/AAAAAAAAAF0/j2H5toKI4LU/s320/776521d1382443136-bad-hat-harry-productions-bad-hat-harry-productions-c-pre.jpg" alt="배드 햇 해리 프로덕션">
+<img class="real" src="http://1.bp.blogspot.com/-Ym24gfwzYQ4/VFOupN40oCI/AAAAAAAAADQ/SmbJvtwTKCc/s1600/%EC%97%91%EC%8A%A4%EB%A7%A8%2B%EC%A0%9C%EC%9E%91%EC%82%AC.png" alt="real 3D">
+  <img class="printreal" src="https://3.bp.blogspot.com/-DqFhRLZ_tj4/VGMuqXJzfZI/AAAAAAAAAFw/wOM4K-oECho/s320/3Dlogotab.png" alt="real 3D">
 </div>
-	
+  <h2 class="tit">시놉시스</h2>
 <div class="synop">
-	<h2 class="tit">시놉시스</h2>
 	<h3>최강의 엑스맨 군단 Vs. 살인 로봇 센티넬!</h3>
 <p>돌연변이를 없애려는 살인 로봇이자, 인류를 위협할 강력한 무기 
 '센티넬'로 인해 사상 최악의 위기에 직면한 미래.</p>
 <p>
 과거와 미래의 엑스맨들이 모두 모여 인류의 미래를 구원할 거대한 전쟁을 시작한다!</p>
 	</div>
-<div>
-	<h2 class="tit">캐릭터</h2>
-	<ol>
+<h2 class="tit2">캐릭터</h2>
+<div class="professorX">	
+  <ol>
 		<li class="intro">
 			<img class="figure" src="http://1.bp.blogspot.com/-tEEGT7s-QCk/VF2cbmZq5wI/AAAAAAAAAFY/fPQy8qz2UF8/s1600/%ED%94%84%EB%A1%9C%ED%8E%98%EC%84%9Cx.png" alt="프로페서 X"></li>
 		</ol>
@@ -71,11 +225,13 @@ ol {list-style: none; padding: 0;}
 	<li>환각 창조
 	</li>
 </ul>
+</div>
+<div class="magnito">
 	<ol>
 	<li class="intro">
-		<img class="figure" src="http://1.bp.blogspot.com/-pPC4my_PkjE/VFyRXBZrG8I/AAAAAAAAAEk/_6UCzWIxBj4/s1600/%EB%A7%A4%EA%B7%B8%EB%8B%88%ED%86%A0.png" alt="매그니토">
+		<img class="figure" src="http://1.bp.blogspot.com/-pPC4my_PkjE/VFyRXBZrG8I/AAAAAAAAAEk/_6UCzWIxBj4/s1600/%EB%A7%A4%EA%B7%B8%EB%8B%88%ED%86%A0.png" alt="매그니토"></li>
 		</ol>
-<h3>매그니토</h3></li>
+<h3>매그니토</h3>
 <p>자기력을 마음대로 사용할 수 있는 최강 능력자 </p>
 <ul>
 	<li>천재적인 지적능력
@@ -85,6 +241,8 @@ ol {list-style: none; padding: 0;}
 	<li>숙련된 전략가
 	</li>
 </ul>
+</div>
+<div class="wolverine">
 <ol>
 	<li class="intro">
 		<img class="figure" src="http://3.bp.blogspot.com/-hnfujDcyiAk/VFyRXZsyceI/AAAAAAAAAEg/rapHZTQl8cA/s1600/%EC%9A%B8%EB%B2%84%EB%A6%B0.png" alt="울버린"></li>
@@ -99,6 +257,8 @@ ol {list-style: none; padding: 0;}
 	<li>아다만티움 갈퀴
 	</li>
 </ul>
+</div>
+<div class="mistic">
 <ol>
 	<li class="intro">
 		<img class="figure" src="http://1.bp.blogspot.com/-fHBMPpi-bhE/VFyRXLg-4eI/AAAAAAAAAEc/RFB56MrsjUU/s1600/%EB%AF%B8%EC%8A%A4%ED%8B%B1.png" alt="미스틱"></li>
@@ -113,6 +273,8 @@ ol {list-style: none; padding: 0;}
 	<li>치유 능력
 	</li>
 </ul>
+</div>
+<div class="kitty">
 	<ol>
 	<li class="intro2">
 		<img class="figure" src="http://1.bp.blogspot.com/-Vw77P5RTSmU/VFyRZPEs-GI/AAAAAAAAAE0/qMZ7NlJkpCM/s1600/%ED%82%A4%ED%8B%B0.png" alt="키티"></li>
@@ -122,6 +284,8 @@ ol {list-style: none; padding: 0;}
 <ul>
 	<li>자유로운 사물 통과
 </ul>
+</div>
+<div class="blink">
 <ol>
 <li class="intro2">
 		<img class="figure" src="http://4.bp.blogspot.com/-bxGNTcuibzw/VF2cbhO6lSI/AAAAAAAAAFU/EoxIinLLlUM/s1600/%EB%B8%94%EB%A7%81%ED%81%AC.png" alt="블링크"></li>
