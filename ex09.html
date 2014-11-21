@@ -5,13 +5,14 @@
   <title>JS Bin</title>
   <style>
     .body {
-      font-family:
+      font-family:'Roboto', arial, sans-serif;
     }
     .topnav {
-      width:100%;
+      width:99.5%;
       height:70px;
       background-color:#DA4336;
       position: absolute;
+      z-index:100;
     }
     .topnav > img {
       width: 30px;
@@ -21,7 +22,8 @@
      display:inline-block; 
      color:white;
      font-size: 1em;
-     margin: 0 30px;
+     margin: 30px;
+     vertical-align: top;
      }
     
     .search {
@@ -35,8 +37,9 @@
       background-color: white;
       position:absolute;
       top:78px;
-      width: 80px;
-      height: 100%;
+      width: 5%;
+      height: 700px;
+      z-index:1;
     }
     .myprofile {
       width:50px;
@@ -55,13 +58,290 @@
       opacity: 1;
     }
     .maillist {
-      background-color: red;
+      background-color: white;
       position: absolute;
       top:78px;
       left:88px;
       width: 50%;
-      height: 100%;
+      height: 87%;
+      overflow-y: scroll;
+      z-index:10;
+      box-shadow: 1px 0 5px gray;
     }
+    ul {
+      list-style-type:none;
+      padding: 0;
+      margin: 0;
+    }
+    .write {
+      position: fixed;
+      left: 970px;
+      top: 810px;
+      padding: 5px;
+      background-color: #da4336;
+      border-radius: 45px;
+
+      z-index:1001;
+    }
+    .mailindex li {
+      padding-top: 10px;
+      border-bottom:1px solid #f2f2f2;
+    }
+    .mailindex img {
+      width:30px;
+      margin-left: 20px;
+    }
+    .Google {
+      display:inline;
+      vertical-align:top;
+      padding: 30px;
+    }
+    .index {
+      margin: 0 0 20px 85px;
+      color: #999999;
+    }
+    .socialnew {
+      color:white;
+      background-color:#4986e7;
+      padding: 2px 8px;
+      float:right;
+      margin: 10px 20px;
+    }
+    .promotionsnew {
+      color:white;
+      background-color:#16a765;
+      padding: 2px 8px;
+      float:right;
+      margin: 10px 20px;
+    }
+    .updatesnew {
+      color:white;
+      background-color:#e9b22f;
+      padding: 2px 8px;
+      float:right;
+      margin: 10px 20px;
+    }
+    .contents {      
+      list-style-type:none;
+      padding: 0;
+      margin: 0;
+    }
+    .contents li {
+      padding-top: 10px;
+      border-bottom:1px solid #f2f2f2;
+    }
+     .contents img {
+      width: 40px;
+      margin-left: 17px;
+      border-radius: 45px;
+     }
+    .name {
+      display:inline;
+      vertical-align: 120%;
+      padding: 0 23px;
+      font-weight: bold;
+    }
+    .readname {
+      display:inline;
+      vertical-align: 120%;
+      margin: 0;
+      padding: 0 23px;
+    }
+    .people {
+      vertical-align: 120%;
+    }
+    .mailtitle {
+      font-weight: bold;
+      margin: 0 0 5px 85px;
+    }
+    .readmailtitle {
+      color:#a7a7a7;
+      margin: 0 0 5px 85px;
+    }
+    .mailcontent {
+      color:#a7a7a7;
+      margin: 0 0 30px 85px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .time {
+      color:#317bf2;
+      font-weight: bold;
+      margin-top:5px;
+      font-size:0.8em;
+      float:right;
+    }
+    .readtime {
+      color:#a7a7a7;
+      margin-top:5px;
+      font-size:0.8em;
+      float:right;
+    }
+    .attach {
+      margin:-5px 10px;
+      opacity:0.7;
+      float:right;
+    }
+    .nomalmail {
+      opacity: 0.3;
+    }
+    .nomalmail, .importantmail {
+      margin-top:-10px;
+      float:right;
+    }
+    .work {
+      color:white;
+      background-color:#fb4726;
+      float:right;
+      padding: 2px 8px;
+      font-weight: bold;
+    }
+    .Fun {
+      color: #043475;
+      background-color:#b5cef4;
+      float:right;
+      padding: 2px 8px;
+      font-weight: bold;
+    }
+    .family {
+      color: #194b54;
+      background-color:#98d7e4;
+      float:right;
+      padding: 2px 8px;
+      font-weight: bold;
+    }
+    .selectmail {
+      
+      background-color:#e3edfe;
+      border-left: 5px solid #3d83f3;
+    }
+    .selectedmail {
+      background-color:white;
+      position:absolute;
+      top:78px;
+      left:54.5%;
+      height:80%;
+      width:40%;
+      padding: 30px 50px;
+    }
+    h4 {
+      display:inline;
+      float: left;
+    }
+    .Funny {
+      color: #043475;
+      background-color:#b5cef4;
+      padding: 2px 8px;
+      float:left;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+    .inbox {
+      color: #dddddd;
+      background-color:#7a7979;
+      padding: 2px 8px;
+      float: left;
+      margin-top: 20px;
+      margin-left: 10px;
+    }
+    .importantselect {
+      float: right;
+      vertical-align: 120%
+    }
+    .selectedindex {
+      margin-top: 100px;
+    }
+    .selectedindex li{
+      padding-top: 10px;
+      padding-bottom: 20px;
+      border-top:1px solid #f2f2f2;
+    }
+    .selectedindex img {
+      width: 40px;
+      margin-top: 20px;
+      border-radius: 45px;
+    }
+    h5 {       
+      display:inline;
+      vertical-align: 120%;
+      margin: 0;
+      padding: 0 23px;
+    }
+    .selectindex {
+      color:#6a6764;
+      font-size:0.8em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .selecttime {
+      color: #6a6764;
+      margin-top:20px;
+      font-size:0.8em;
+      float:right;
+    }
+    .selectindex {
+      margin-top: 0;
+      margin-left: 67px;
+    }
+    .timetome {
+      color:#6a6764;
+      font-size:0.8em;
+      margin-left: 67px;
+    }
+    .detail {
+      color: #3980f3;
+      font-size:0.8em;
+      margin-left: 10px;
+    }
+    .ssreply {
+      padding: 20px 0;
+      border-bottom: 1px solid #f2f2f2;
+    }
+    .qouted {
+      color:#3980f3;
+      font-size:0.8em;
+    }
+    .selectreply {
+      float: right;
+      opacity: 0.3;
+    }
+    .selectreply2 {
+      margin-top: 50px;
+      margin-left: 100px;
+      display: inline-block;
+      opacity: 0.3;
+    }
+    .selectreplyall {
+      margin-top: 50px;
+      margin-left: 200px;
+      display: inline-block;
+      opacity: 0.3;
+    }
+    .selectforward {
+      margin-top: 50px;
+      margin-left: 200px;
+      display: inline-block;
+      opacity: 0.3;
+    }
+    .othersmessage {
+      margin-top: 150px;
+    }
+.others {
+  margin-top: 20px;
+  width: 50px;
+  border-radius: 45px;
+}
+.message {
+  background-color: white;
+  padding: 0.2em 1em;
+  font-size: 0.7em;
+  border-radius: 30px;
+  margin-left: -5em;
+  box-shadow: 1px 1px 1px #b0b0b0;
+}
+
   </style>
 </head>
 <body>
@@ -76,14 +356,145 @@
     <img class="download" src="http://2.bp.blogspot.com/-QzlMtJg1GxI/VG3ccmgttUI/AAAAAAAAAHk/lHYtLgLCJVI/s1600/ic_assignment_returned_24px.png" alt="download">
  </nav>
   <nav class="leftnav">
-    <img class="myprofile" src="http://3.bp.blogspot.com/-mstNiCVeHcA/VG3k-NFls6I/AAAAAAAAAJY/qR17MzfHCCA/s1600/Chrysanthemum.jpg" alt="myprofile">
+    <h2><img class="myprofile" src="http://3.bp.blogspot.com/-mstNiCVeHcA/VG3k-NFls6I/AAAAAAAAAJY/qR17MzfHCCA/s1600/Chrysanthemum.jpg" alt="myprofile"></h2>
     <img class="mailbox" src="http://4.bp.blogspot.com/-9MnrhkDn-Zk/VG3jlf5heFI/AAAAAAAAAI8/2J0kZmQ9sVA/s1600/ic_inbox_24px.png" alt="mailbox">
     <img class="friends" src="http://1.bp.blogspot.com/-TdHFs8HeNo4/VG3jdKThlqI/AAAAAAAAAIw/r5w5rKtI_Ng/s1600/ic_account_child_24px.png" alt="friends">
     <img class="tag" src="http://1.bp.blogspot.com/-T3L6AyoEmgE/VG3jsmeXlaI/AAAAAAAAAJE/gQIPTnfnHAA/s1600/ic_loyalty_24px.png" alt="tag">
     <img class="information" src="http://1.bp.blogspot.com/-itILgPkbEac/VG3jdCQQHzI/AAAAAAAAAIc/1FThQAjxFIY/s1600/ic_info_24px.png" alt="information">
+    <div class="othersmessage">
+    <img class="others" src="http://4.bp.blogspot.com/-K07DOnVlEbQ/VG3k_Ygw7TI/AAAAAAAAAJw/fzbSlNlA6pg/s1600/Lighthouse.jpg" alt="other message">
+    <span class="message">5</span>
+  </div>
+  <div>
+    <img class="others" src="http://3.bp.blogspot.com/-1W1FkeEl1Yk/VG3k-2GqmJI/AAAAAAAAAJg/6y198KuMxRo/s1600/Jellyfish.jpg" alt="other message">
+    <span class="message">10</span>
+    </div>
   </nav>
   <div class="maillist">
-    <img class="friends" src="http://1.bp.blogspot.com/-TdHFs8HeNo4/VG3jdKThlqI/AAAAAAAAAIw/r5w5rKtI_Ng/s1600/ic_account_child_24px.png" alt="friends">
+    <img class="write" src="http://2.bp.blogspot.com/-ZqM6CT_Aj8s/VG9nSlLhRyI/AAAAAAAAAMA/yNw_VS0f0k8/s1600/ic_edit_24px.png" alt="write">
+    <ul class="mailindex">
+      <li>
+    <span><img class="social" src="http://4.bp.blogspot.com/-HQLwnS2PVZk/VG85e-VawII/AAAAAAAAAKg/1coifj60XxM/s1600/ic_account_child_24px1.png" alt="social"></span>
+        <h3 class="Google">Social</h3>
+        <span class="socialnew">1 New</span>
+        <p class="index">Google +</p>
+      </li>
+      <li>
+    <span><img class="promotions" src="http://3.bp.blogspot.com/-UGsuZRO4bQc/VG85e-And_I/AAAAAAAAAKc/1-NSRhuKFiE/s1600/ic_loyalty_24px1.png" alt="promotions"></span>
+        <h3 class="Google">Promotions</h3>
+        <span class="promotionsnew">2 New</span>
+        <p class="index">Zagat, Google Offers</p>
+      </li>
+      <li>
+    <span><img class="updates" src="http://1.bp.blogspot.com/-sNOS5HWMqFI/VG85e-0lnSI/AAAAAAAAAKk/GRZTwHjY8oo/s1600/ic_info_24px1.png" alt="updates"></span>
+        <h3 class="Google">Updates</h3>
+        <span class="updatesnew">1 New</span>
+        <p class="index">Google Play</p>
+      </li>
+    </ul>
+    <ul class="contents">
+      <li>
+        <img src="http://2.bp.blogspot.com/-wB7cqWZR4vE/VG3k-KFGEnI/AAAAAAAAAJU/PXkfhroUKnc/s1600/Desert.jpg" alt="AndyBrown">
+        <p class="readname">Andy Brown</p>
+        <span class="readtime">1:45 PM</span>
+        <p class="readmailtitle">Bring Your Parents to Work Day!</p>
+                <img class="nomalmail" src="http://3.bp.blogspot.com/-Qi5N01j8hJo/VG9N0xmIhRI/AAAAAAAAALE/oSYskQOA6BE/s1600/ic_star_outline_24px.png" alt="normal_mail">
+        <span class="work">Work</span>
+        <p class="mailcontent">Hey! What do tou think about a Team Lunch:Parents to Work Day!a at libero. Fusce venenatis ullamcorper lacus, nec vulputate augue ultricies ac. Sed vel ligula dui. Phasellus enim nunc, </p>
+      </li>
+      <li>
+        <img src="http://2.bp.blogspot.com/-yTB_nacJGe8/VG3k-MVheGI/AAAAAAAAAJQ/StQhF-aK_i4/s1600/Hydrangeas.jpg" alt="KeriAnderson">
+        <p class="name">Keri Anderson</p>
+        <span class="time">1:39 PM</span>
+        <img class="attach" src="http://4.bp.blogspot.com/-O-DAxvbvFsU/VG9N0yE3-ZI/AAAAAAAAALA/OWoW2bFyTOI/s1600/ic_attachment_24px.png" alt="fileattach">
+        <p class="mailtitle">Picture from last Saturday</p>
+        <img class="nomalmail" src="http://3.bp.blogspot.com/-Qi5N01j8hJo/VG9N0xmIhRI/AAAAAAAAALE/oSYskQOA6BE/s1600/ic_star_outline_24px.png" alt="normal_mail">
+        <p class="mailcontent">Check out the new friend we made, Merrill and I ran in to him and a at libero. Fusce venenatis ullamcorper lacus, nec vulputate augue ultricies ac. Sed vel ligula dui. Phasellus enim nunc, </p>
+      </li>
+      <li class="selectmail">
+        <img src="http://3.bp.blogspot.com/-1W1FkeEl1Yk/VG3k-2GqmJI/AAAAAAAAAJg/6y198KuMxRo/s1600/Jellyfish.jpg" alt="RegisMiller">
+        <p class="readname">Regis,Peter,Rachel</p>
+        <span class="people">3</span>
+        <span class="readtime">Sep 29</span>
+        <p class="readmailtitle">Board game night?</p>
+        <img class="importantmail" src="http://1.bp.blogspot.com/-a1kWNdWDCOM/VG9N0-s6byI/AAAAAAAAAK8/i4dWoYJc_QI/s1600/ic_star_24px.png" alt="important_mail">
+        <span class="Fun">Fun</span>
+        <p class="mailcontent">Sunday works! If you can det Dexter and Sophie I will be a at libero. Fusce venenatis ullamcorper lacus, nec vulputate augue ultricies ac. Sed vel ligula dui. Phasellus enim nunc, </p>
+      </li>
+      <li>
+        <img src="http://4.bp.blogspot.com/-K07DOnVlEbQ/VG3k_Ygw7TI/AAAAAAAAAJw/fzbSlNlA6pg/s1600/Lighthouse.jpg" alt="ArunaKnight">
+        <p class="name">Aruna Knight</p>
+        <span class="time">Sep 29</span>
+        <p class="mailtitle">Book you recommend</p>
+        <img class="importantmail" src="http://1.bp.blogspot.com/-a1kWNdWDCOM/VG9N0-s6byI/AAAAAAAAAK8/i4dWoYJc_QI/s1600/ic_star_24px.png" alt="important_mail">
+        <span class="family">Family</span>
+        <p class="mailcontent">About to go on a trip and was hoping to start that bobby a at libero. Fusce venenatis ullamcorper lacus, nec vulputate augue ultricies ac. Sed vel ligula dui. Phasellus enim nunc, </p>
+      </li>
+      <li>
+        <img src="http://4.bp.blogspot.com/-k5sjDAXCDVc/VG3lAdQgTzI/AAAAAAAAAJ4/dyjxPh2fihw/s1600/Tulips.jpg" alt="PaulWestbrook">
+        <p class="readname">Paul Westbrook</p>
+        <span class="readtime">Sep 29</span>
+        <img class="attach" src="http://4.bp.blogspot.com/-O-DAxvbvFsU/VG9N0yE3-ZI/AAAAAAAAALA/OWoW2bFyTOI/s1600/ic_attachment_24px.png" alt="fileattach">
+        <p class="readmailtitle">Oops... need to reschedule</p>
+        <img class="nomalmail" src="http://3.bp.blogspot.com/-Qi5N01j8hJo/VG9N0xmIhRI/AAAAAAAAALE/oSYskQOA6BE/s1600/ic_star_outline_24px.png" alt="normal_mail">
+        <p class="mailcontent">That's okay Peter! I've attached a few pictures of my place f a at libero. Fusce venenatis ullamcorper lacus, nec vulputate augue ultricies ac. Sed vel ligula dui. Phasellus enim nunc, </p>
+      </li>
+      <li>
+        <img src="http://4.bp.blogspot.com/-z3f6YXNZY50/VG3k_xLo6pI/AAAAAAAAAJ0/DFaySXXN084/s1600/Penguins.jpg" alt="AnissaLee">
+        <p class="name">Anissa Lee</p>
+        <span class="time">Sep 29</span>
+        <p class="mailtitle">Furniture we no longer need</p>
+        <img class="nomalmail" src="http://3.bp.blogspot.com/-Qi5N01j8hJo/VG9N0xmIhRI/AAAAAAAAALE/oSYskQOA6BE/s1600/ic_star_outline_24px.png" alt="normal_mail">
+        <p class="mailcontent">Integer nec dui at est aliquam fringilla. Nulla lacinia erat vulputate nibh a at libero. Fusce venenatis ullamcorper lacus, nec vulputate augue ultricies ac. Sed vel ligula dui. Phasellus enim nunc, </p>
+      </li>
   </div>
+    <div class="selectedmail">
+      <h4>Board game night?</h4>
+      <span class="Funny">Fun</span>
+      <span class="inbox">Inbox</span>
+      <img class="importantselect" src="http://1.bp.blogspot.com/-a1kWNdWDCOM/VG9N0-s6byI/AAAAAAAAAK8/i4dWoYJc_QI/s1600/ic_star_24px.png" alt="important_mail">
+    <ul class="selectedindex">
+      <li>
+        <img src="http://3.bp.blogspot.com/-1W1FkeEl1Yk/VG3k-2GqmJI/AAAAAAAAAJg/6y198KuMxRo/s1600/Jellyfish.jpg" alt="Regis">
+        <h5>Regis Miller</h5>
+        <span class="selecttime">Sep 29</span>
+        <p class="selectindex">Maria, I'm trying to schedule a board game night this week, when would you be Integer nec dui at est aliquam fringilla. Nulla lacinia erat vulputate nibh a at libero. Fusce venenatis ullamcorper lacus, nec vulputate augue ultricies ac. Sed vel ligula dui. Phasellus enim nunc,</p>
+      </li>
+      <li>
+        <img src="http://4.bp.blogspot.com/-6y89vKU76Bs/VG3k_JGaZII/AAAAAAAAAJo/TilSwjeRbGU/s1600/Koala.jpg" alt="PeterJohnson">
+        <h5>Peter Johnson</h5>
+        <span class="selecttime">Sep 29</span>
+        <p class="selectindex">What do you think about Sundat? My car seats five so I could pick up Dexter and Integer nec dui at est aliquam fringilla. Nulla lacinia erat vulputate nibh a at libero. Fusce venenatis ullamcorper lacus, nec vulputate augue ultricies ac. Sed vel ligula dui. Phasellus enim nunc,</p>
+      </li>
+      <li>
+        <img src="http://4.bp.blogspot.com/-z3f6YXNZY50/VG3k_xLo6pI/AAAAAAAAAJ0/DFaySXXN084/s1600/Penguins.jpg" alt="RachelShin">
+        <h5>Rachel Shin</h5>
+        <span class="selectreply">
+        <img src="http://4.bp.blogspot.com/-XjDsvd68m4M/VG9jjrXgNGI/AAAAAAAAALk/egDG5wN6_SY/s1600/ic_reply_24px.png" alt="reply">
+        <img src="http://2.bp.blogspot.com/-lUb7KuvFkEk/VG9jjVAdTCI/AAAAAAAAALg/fpBAQGT7wX0/s1600/ic_forward_24px.png" alt="forward">
+        <img src="http://1.bp.blogspot.com/-i54L0JJZcV4/VG9jjaj0lsI/AAAAAAAAALc/kvw_mQ8J9vk/s1600/ic_more_vert_24px.png" alt="more">
+      </span>
+        <p class="selectindex">to me</p>
+        <span class="timetome">Sep 29</span>
+        <span class="detail">View details</span>
+      </li>
+    </ul>
+    <div class="ssreply">
+<p>Sunday works! If you can get Dexter ans Sophie I will handle the chips and salsa</p>
+<span class="qouted">▶ Show quoted text</span>
+</div>
+<div class="selectreply2">
+        <img src="http://4.bp.blogspot.com/-XjDsvd68m4M/VG9jjrXgNGI/AAAAAAAAALk/egDG5wN6_SY/s1600/ic_reply_24px.png" alt="reply">
+        <p>Reply</p>
+      </div>
+        <div class="selectreplyall">
+        <img src="http://2.bp.blogspot.com/-3FQpoW1cWTI/VG9jkG3QrmI/AAAAAAAAALw/XvTK2HStlwU/s1600/ic_reply_all_24px.png" alt="reply_all">
+        <p>Reply all</p>
+      </div>
+      <div class="selectforward">
+        <img src="http://2.bp.blogspot.com/-lUb7KuvFkEk/VG9jjVAdTCI/AAAAAAAAALg/fpBAQGT7wX0/s1600/ic_forward_24px.png" alt="forward">
+        <p>Forward</p>
+      </div>
+    </div>
 </body>
 </html>
