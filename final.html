@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+  <title>Calendar - 18 July 2014</title>
+  <style>
+  body {
+    overflow-y:auto;
+    background-color:#5cffbd;
+    font-family : arial, sans-serif;
+  }
+    ul {
+      list-style-type:none;
+      margin:0;
+      padding:0;
+    }
+    .navigation {
+      position:absolute;
+      top:10px;
+      left:35%;
+      width:30%;
+      height:30px;
+      background-color: #0096a6;
+      color: #59b1cd;
+      box-shadow: 0 1px 1px #333;
+    }
+    .nav {
+      margin:0;
+      background-color: #0096a6;
+      line-height:30px;
+      margin-left:85%;
+    }
+    .nav .fa {
+      margin-left:10px;
+    }
+    .today {
+      position:absolute;
+      top:40px;
+      left:35%;
+      width:30%;
+      text-align:center;
+      background-color:#00bcd4;
+      height:150px;
+      box-shadow: 0 2px 1px #444;
+      z-index:100;
+    }
+    h1 {
+      font-family: 'Roboto', sans-serif;
+      font-weight:normal;
+      font-size:4em;
+      color:white;
+      display :inline-block;
+      margin:20px 0 0 0;
+    }
+    h2 {
+      color:#007686;
+      padding:0;
+      margin:0;
+    }
+    .fa-arrow-left{
+      margin-left:30px;
+      color:#b8eef5;
+      float:left;
+      line-height:150px;
+    }
+    .fa-arrow-right{
+      margin-right:30px;
+      color:#b8eef5;
+      float:right;
+      line-height:150px;
+    }
+    .day{
+      position:absolute;
+      top:190px;
+      left:35%;
+      width:30%;
+      height:30px;
+      background-color:#5f6060;
+      color:#b8e2ee;
+      box-shadow: 0 2px 1px #333; 
+      z-index:1;
+    } 
+    .day div {
+      padding:5px 0;
+      margin-left:30px;
+    }
+    .fixed {
+      box-shadow:1px 1px 1px black;
+      font-weight:bold;
+      position:absolute;
+      top:175px;
+      left:62%;
+      background-color:yellow;
+      padding:6px 10px;
+      border-radius:90px;
+      z-index:1000;
+    }
+    .alarm {
+      background-color:#f5feff;
+      position:absolute;
+      top:220px;
+      left:35%;
+      width:30%;
+      height:700px;
+      box-shadow: 0 3px 5px #222;
+    }
+    .bell {
+      display:inline-block;
+      text-align:center;
+    }
+    .bellon{
+      color:#2096f4;
+    }
+    .belloff {
+      color:#cfd1d1;
+    }
+    .bell li {
+      margin:150px 0 50px 10px;
+    }
+    .fa-toggle-on, .fa-toggle-off {
+      float:right;
+      line-height:150px;
+    }
+    .sunday .blue {
+      color:#328cc8;
+    }
+    .sunday li {
+      display:inline-block;
+      color:#afb6b7;
+      margin-right:5px;
+    }
+    h3 {
+      font-weight:normal;
+      font-size : 2em;
+      display:inline-block;
+    }
+    .alarmday {
+      width:90%;
+      display:inline-block;
+    }
+    .lili {
+      border-top: 1px solid #dbe0e0;
+      margin:40px 20px;
+    }
+    .lili2 {
+      margin:40px 20px;
+    }
+    .fa-toggle-on {
+      color: #2096f4;
+    }
+    .fa-toggle-off {
+      color: #787b7c;
+    }
+    .on {
+      color:#545454;
+    }
+    .off {
+      color:#b2b8b9;
+    }
+@media (max-height:900px) {
+       .alarm {
+      overflow-y:scroll;
+    }
+ }
+  </style>
+</head>
+<body>
+  <section class="navigation">
+    <p class="nav">
+      <i class="fa fa-minus"></i>
+      <i class="fa fa-square-o"></i>
+      <i class="fa fa-times"></i>
+    </p>
+  </section>
+  <section class="today">
+    <i class="fa fa-arrow-left"></i>
+    <i class="fa fa-arrow-right"></i>
+    <h1>18</h1>
+    <h2>July 2014</h2>
+  </section>
+    <div class="fixed">+</div>
+  <section class="day">
+    <div>MONDAY</div>
+  </section>
+  <section class="alarm">
+    <ul class="bell">
+    <li><i class="bellon fa fa-bell"></i></li>
+    <li><i class="belloff fa fa-bell"></i></li>
+    <li><i class="bellon fa fa-bell"></i></li>
+    <li><i class="belloff fa fa-bell"></i></li>
+    </ul>
+    <ul class="alarmday">
+    <li class="lili2">
+    <h3 class="on">06:30</h3>
+    <i class="fa fa-toggle-on"></i>
+    <ul class="sunday">
+      <li class="blue">SU</li>
+      <li>MO</li>
+      <li class="blue">TU</li>
+      <li class="blue">WE</li>
+      <li>TH</li>
+      <li class="blue">FR</li>
+      <li class="blue">SA</li>
+      </ul>
+    </li>
+        <li class="lili">
+    <h3 class="off">09:30</h3>
+    <i class="fa fa-toggle-off"></i>
+    <ul class="sunday">
+      <li>SU</li>
+      <li>MO</li>
+      <li>TU</li>
+      <li class="blue">WE</li>
+      <li>TH</li>
+      <li>FR</li>
+      <li>SA</li>
+      </ul>
+    </li>
+        <li class="lili">
+    <h3 class="on">15:30</h3>
+    <i class="fa fa-toggle-on"></i>
+    <ul class="sunday">
+      <li class="blue">SU</li>
+      <li>MO</li>
+      <li>TU</li>
+      <li>WE</li>
+      <li>TH</li>
+      <li>FR</li>
+      <li>SA</li>
+      </ul>
+    </li> 
+      <li class="lili">
+    <h3 class="off">17:30</h3>
+    <i class="fa fa-toggle-off"></i>
+    <ul class="sunday">
+      <li>SU</li>
+      <li>MO</li>
+      <li class="blue">TU</li>
+      <li>WE</li>
+      <li class="blue">TH</li>
+      <li class="blue">FR</li>
+      <li>SA</li>
+      </ul>
+    </li> 
+    </ul>
+  </section>
+</body>
+</html>
